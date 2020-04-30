@@ -3,19 +3,64 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
 	<title>Página Inicial - Musicalizando</title>
 </head>
 <body>
-	<!-- Navbar -->
-		<!-- Home -->
-		<!-- Artigos Oficiais -->
-		<!-- Artigos de Usuários -->
-		<!-- Fórum -->
-		<!-- Perfil -->
-		<!-- Contato -->
-		<!-- Ajude-nos -->
-		<!-- Login -->
-		<!-- Cadastre-se -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-gradient-success">
+		<div class="container">
+			<a href="#" class="navbar-brand h1 mb-0">Musicalizando</a>
+			
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nb-site">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="nb-site">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+					<li class="nav-item"><a href="#" class="nav-link">Fórum</a></li>
+					<li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
+					<li class="nav-item"><a href="#" class="nav-link">Ajude-nos</a></li>
+				</ul>
+
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item dropdown">
+						<a href="#" data-toggle="dropdown" id="nb-drop" class="nav-link dropdown-toggle">
+							Artigos
+						</a>
+						
+						<div class="dropdown-menu">
+							<a href="#" class="dropdown-item">Artigos Oficiais</a>
+							<a href="#" class="dropdown-item">Artigos de Usuário</a>
+						</div>
+					</li>
+					
+					<li class="nav-item dropdown">
+						<a href="#" data-toggle="dropdown" id="nb-drop" class="nav-link dropdown-toggle">
+							Aprender
+						</a>
+						
+						<div class="dropdown-menu">
+							<a href="#" class="dropdown-item">Teoria Musical</a>
+							<a href="#" class="dropdown-item">Ukulele</a>
+							<a href="#" class="dropdown-item">Violão</a>
+							<a href="#" class="dropdown-item">Guitarra</a>
+							<a href="#" class="dropdown-item">Teclado</a>
+						</div>
+					</li>
+				</ul>
+
+				<form class="form-inline">
+					<input type="search" class="form-control ml-4 mr-2" placeholder="Buscar...">
+					<button class="btn btn-outline-light" type="submit">Ok</button>
+				</form>
+			</div>
+		</div>
+
+		<button class="btn btn-outline-dark mr-1">Cadastre-se</button>
+		<button class="btn btn-dark">Login</button>
+	</nav>
 
 	<!-- Carrousel -->
 		<!-- Último artigo oficial -->
@@ -41,5 +86,10 @@
 		<!-- Stefani Giovana -->
 
 	<!-- Footer -->
+	
+	<script src="node_modules/jquery/dist/jquery.js"></script>
+	<script src="node_modules/popper.js/dist/umd/popper.js"></script>
+	<!-- <script src="node_modules/popper.js/dist/umd/popper.min.js"></script> -->
+	<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
 </body>
 </html>
