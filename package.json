@@ -1,0 +1,30 @@
+{
+  "name": "musicalizando",
+  "version": "1.0.0",
+  "description": "This is the project of a website with the main objective of teaching music in general for free to each user",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuisMeirelles/musicalizando.git"
+  },
+  "keywords": [
+    "Música",
+    "Aprender",
+    "Aula",
+    "Curso"
+  ],
+  "author": "Luis Meirelles",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LuisMeirelles/musicalizando/issues"
+  },
+  "homepage": "https://github.com/LuisMeirelles/musicalizando#readme",
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.2",
+    "jquery": "^3.5.0",
+    "popper.js": "^1.16.1"
+  }
+}
