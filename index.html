@@ -3,11 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="css/bootstrap.css">
+    
+    <link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
-	<title>Página Inicial - Musicalizando</title>
+    
+    <title>Página Inicial - Musicalizando</title>
 </head>
 <body>
 	<div class="wrapper">
@@ -30,6 +33,9 @@
                         <i class="fas fa-comments"></i>
                         <span>Fórum</span>
                     </a>
+                </li>
+
+                <li>
                     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                         <i class="fas fa-copy"></i>
                         <span>Artigos</span>
@@ -133,11 +139,13 @@
             if(width <= 768) {
                 $('#sidebarCollapse').addClass('active');
                 $('#sidebar').addClass('active');
+                $('#content').toggleClass('active');
             }
 
             $('#sidebarCollapse').on('click', function () {
                 $('#sidebar').toggleClass('active');
                 $(this).toggleClass('active');
+                $('#content').toggleClass('active');
             });
         });
     </script>

@@ -6,7 +6,7 @@ body {
 
 p {
   font-size: 1.1em;
-  color: #999;
+  color: black;
 }
 
 a, a:hover, a:focus {
@@ -45,28 +45,18 @@ i, span {
 }
 
 #sidebar {
-  min-width: 250px;
-  max-width: 250px;
-  min-height: 100vh;
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
   background: #1f317a;
   color: white;
   transition: all 0.3s;
 }
-#sidebar .sidebar-header {
-  min-width: 80px;
-  max-width: 80px;
-  text-align: center;
-  padding: 20px;
-}
-#sidebar .sidebar-header h3 {
-  display: block;
-}
-#sidebar .sidebar-header strong {
-  display: none;
-}
 #sidebar.active {
-  min-width: 80px;
-  max-width: 80px;
+  width: 80px;
   text-align: center;
 }
 #sidebar.active .sidebar-header {
@@ -104,6 +94,18 @@ i, span {
   -webkit-transform: translateX(50%);
   -ms-transform: translateX(50%);
   transform: translateX(50%);
+}
+#sidebar .sidebar-header {
+  min-width: 80px;
+  max-width: 80px;
+  text-align: center;
+  padding: 20px;
+}
+#sidebar .sidebar-header h3 {
+  display: block;
+}
+#sidebar .sidebar-header strong {
+  display: none;
 }
 #sidebar ul li a {
   text-align: left;
@@ -186,10 +188,16 @@ ul ul a {
     CONTENT STYLE
 ----------------------------------------------------- */
 #content {
-  width: 100%;
+  width: calc(100% - 250px);
   padding: 20px;
   min-height: 100vh;
   transition: all 0.3s;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#content.active {
+  width: calc(100% - 80px);
 }
 #content button {
   background: #132053 linear-gradient(180deg, #1f317a, #132053) repeat-x;
