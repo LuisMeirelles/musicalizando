@@ -3,64 +3,100 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
 	<title>Página Inicial - Musicalizando</title>
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-gradient-success">
-		<div class="container">
-			<a href="#" class="navbar-brand h1 mb-0">Musicalizando</a>
-			
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nb-site">
-				<span class="navbar-toggler-icon"></span>
-			</button>
+	<div class="wrapper">
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Musicalizando</h3>
+                <strong>M</strong>
+            </div>
 
-			<div class="collapse navbar-collapse" id="nb-site">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-					<li class="nav-item"><a href="#" class="nav-link">Fórum</a></li>
-					<li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
-					<li class="nav-item"><a href="#" class="nav-link">Ajude-nos</a></li>
-				</ul>
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
 
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item dropdown">
-						<a href="#" data-toggle="dropdown" id="nb-drop" class="nav-link dropdown-toggle">
-							Artigos
-						</a>
-						
-						<div class="dropdown-menu">
-							<a href="#" class="dropdown-item">Artigos Oficiais</a>
-							<a href="#" class="dropdown-item">Artigos de Usuário</a>
-						</div>
-					</li>
-					
-					<li class="nav-item dropdown">
-						<a href="#" data-toggle="dropdown" id="nb-drop" class="nav-link dropdown-toggle">
-							Aprender
-						</a>
-						
-						<div class="dropdown-menu">
-							<a href="#" class="dropdown-item">Teoria Musical</a>
-							<a href="#" class="dropdown-item">Ukulele</a>
-							<a href="#" class="dropdown-item">Violão</a>
-							<a href="#" class="dropdown-item">Guitarra</a>
-							<a href="#" class="dropdown-item">Teclado</a>
-						</div>
-					</li>
-				</ul>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-comments"></i>
+                        <span>Fórum</span>
+                    </a>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-copy"></i>
+                        <span>Artigos</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#">Artigos Oficiais</a>
+                        </li>
 
-				<form class="form-inline">
-					<input type="search" class="form-control ml-4 mr-2" placeholder="Buscar...">
-					<button class="btn btn-outline-light" type="submit">Ok</button>
-				</form>
-			</div>
-		</div>
+                        <li>
+                            <a href="#">Artigos de Usuário</a>
+                        </li>
+                    </ul>
+                </li>
 
-		<button class="btn btn-outline-dark mr-1">Cadastre-se</button>
-		<button class="btn btn-dark">Login</button>
-	</nav>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-question"></i>
+                        <span>FAQ</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fas fa-comment-alt"></i>
+                        <span>Contato</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="content">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+						<div class="l ml-0">
+							<span></span>
+							<span></span>
+							<span></span>
+                        </div>
+                        
+                    	<div class="r">Toggle Sidebar</div>
+                    </button>
+
+                    <a href="#" class="btn btn-dark ml-auto mr-2">Cadastre-se</a>
+                    <a href="#" class="btn btn-outline-dark">Login</a>
+                </div>
+            </nav>
+
+            <h1>TESTE</h1>
+            
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui est, tenetur quasi cumque aspernatur dolorum quas ratione, illum quo minus architecto itaque sed doloremque aut molestias neque error voluptates nihil?</p>
+            <span class="line"></span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id hic esse fugit vitae? Maxime soluta molestias obcaecati dignissimos nulla quod laudantium necessitatibus est quae similique, aut mollitia optio earum odio.</p>
+            <span class="line"></span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id hic esse fugit vitae? Maxime soluta molestias obcaecati dignissimos nulla quod laudantium necessitatibus est quae similique, aut mollitia optio earum odio.</p>
+            <span class="line"></span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id hic esse fugit vitae? Maxime soluta molestias obcaecati dignissimos nulla quod laudantium necessitatibus est quae similique, aut mollitia optio earum odio.</p>
+            <span class="line"></span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id hic esse fugit vitae? Maxime soluta molestias obcaecati dignissimos nulla quod laudantium necessitatibus est quae similique, aut mollitia optio earum odio.</p>
+            <span class="line"></span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id hic esse fugit vitae? Maxime soluta molestias obcaecati dignissimos nulla quod laudantium necessitatibus est quae similique, aut mollitia optio earum odio.</p>
+            <span class="line"></span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id hic esse fugit vitae? Maxime soluta molestias obcaecati dignissimos nulla quod laudantium necessitatibus est quae similique, aut mollitia optio earum odio.</p>
+            <span class="line"></span>
+        </div>
+    </div>
 
 	<!-- Carrousel -->
 		<!-- Último artigo oficial -->
@@ -89,7 +125,21 @@
 	
 	<script src="node_modules/jquery/dist/jquery.js"></script>
 	<script src="node_modules/popper.js/dist/umd/popper.js"></script>
-	<!-- <script src="node_modules/popper.js/dist/umd/popper.min.js"></script> -->
 	<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+	<script type="text/javascript">
+        $(document).ready(function () {
+            var width = $(window).width();
+
+            if(width <= 768) {
+                $('#sidebarCollapse').addClass('active');
+                $('#sidebar').addClass('active');
+            }
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+        });
+    </script>
 </body>
 </html>
