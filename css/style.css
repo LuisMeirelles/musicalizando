@@ -46,7 +46,7 @@ i, span {
 
 #sidebar {
   width: 250px;
-  height: 100vh;
+  min-height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
@@ -61,14 +61,14 @@ i, span {
 }
 #sidebar.active .sidebar-header {
   padding: 20px;
-  background: #1f317a;
+  background: #192a71;
 }
 #sidebar.active .sidebar-header h3 {
   display: none;
 }
 #sidebar.active .sidebar-header strong {
   display: block;
-  font-size: 1.8em;
+  font-size: 1.75em;
 }
 #sidebar.active ul li a {
   padding: 20px 10px;
@@ -97,12 +97,15 @@ i, span {
 }
 #sidebar .sidebar-header {
   min-width: 80px;
-  max-width: 80px;
+  max-width: 250px;
   text-align: center;
   padding: 20px;
+  background-color: #192a71;
 }
 #sidebar .sidebar-header h3 {
   display: block;
+  overflow: hidden;
+  animation: aumenta 0.3s;
 }
 #sidebar .sidebar-header strong {
   display: none;
@@ -137,6 +140,12 @@ a[data-toggle=collapse] {
   text-align: right;
 }
 
+#sidebarCollapse {
+  background: #132053 linear-gradient(180deg, #1f317a, #132053) repeat-x;
+  border-color: #132053;
+  box-shadow: none;
+  cursor: pointer;
+}
 #sidebarCollapse div span {
   width: 100%;
   height: 2px;
@@ -199,12 +208,15 @@ ul ul a {
 #content.active {
   width: calc(100% - 80px);
 }
-#content button {
-  background: #132053 linear-gradient(180deg, #1f317a, #132053) repeat-x;
-  border-color: #132053;
-  box-shadow: none;
-}
 
+@keyframes aumenta {
+  from {
+    font-size: 5px;
+  }
+  to {
+    font-size: 1.75em;
+  }
+}
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */
@@ -242,15 +254,8 @@ ul ul a {
     display: none;
   }
 
-  #sidebarCollapse div span {
-    width: 100%;
-    height: 2px;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    display: block;
-    background: #555;
-    transition: all 0.8s cubic-bezier(0.81, -0.33, 0.345, 1.375);
-    transform: none;
+  #sidebarCollapse {
+    padding: 12px 12px;
   }
   #sidebarCollapse div span:first-of-type {
     transform: rotate(-315deg) translate(0px, -2px);
@@ -279,6 +284,19 @@ ul ul a {
     -webkit-transform: translateX(50%);
     -ms-transform: translateX(50%);
     transform: translateX(50%);
+  }
+
+  #content {
+    width: 100%;
+  }
+  #content.active {
+    width: calc(100% - 80px);
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 }
 
