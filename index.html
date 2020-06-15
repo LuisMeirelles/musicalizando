@@ -3,123 +3,223 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
-    
-    <link rel="stylesheet" href="css/bootstrap.css">
+	
+	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+	
+	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
-    
-    <title>Página Inicial - Musicalizando</title>
+	
+	<title>Página Inicial - Musicalizando</title>
 </head>
 <body>
+	<nav id="sidebar">
+		<div class="sidebar-header">
+			<h3>Musicalizando</h3>
+			<strong>M</strong>
+		</div>
 
-	<div class="wrapper">
-        <nav id="sidebar">
-            <div class="sidebar-header">
-                <h3>Musicalizando</h3>
-                <strong>M</strong>
-            </div>
+		<ul class="list-unstyled components">
+			<li class="active">
+				<a href="#">
+					<i class="fas fa-home"></i>
+					<span>Home</span>
+				</a>
+			</li>
 
-            <ul class="list-unstyled components">
-                <li class="active">
-                    <a href="#">
-                        <i class="fas fa-home"></i>
-                        <span>Home</span>
-                    </a>
-                </li>
+			<li>
+				<a href="#">
+					<i class="fas fa-comments"></i>
+					<span>Fórum</span>
+				</a>
+			</li>
 
-                <li>
-                    <a href="#">
-                        <i class="fas fa-comments"></i>
-                        <span>Fórum</span>
-                    </a>
-                </li>
+			<li>
+				<a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+					<i class="fas fa-copy"></i>
+					<span>Artigos</span>
+				</a>
+				
+				<ul class="collapse list-unstyled" id="pageSubmenu">
+					<li>
+						<a href="#">Artigos Oficiais</a>
+					</li>
 
-                <li>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                        <i class="fas fa-copy"></i>
-                        <span>Artigos</span>
-                    </a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <li>
-                            <a href="#">Artigos Oficiais</a>
-                        </li>
+					<li>
+						<a href="#">Artigos de Usuário</a>
+					</li>
+				</ul>
+			</li>
 
-                        <li>
-                            <a href="#">Artigos de Usuário</a>
-                        </li>
-                    </ul>
-                </li>
+			<li>
+				<a href="#">
+					<i class="fas fa-question"></i>
+					<span>FAQ</span>
+				</a>
+			</li>
 
-                <li>
-                    <a href="#">
-                        <i class="fas fa-question"></i>
-                        <span>FAQ</span>
-                    </a>
-                </li>
+			<li>
+				<a href="#">
+					<i class="fas fa-comment-alt"></i>
+					<span>Contato</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
 
-                <li>
-                    <a href="#">
-                        <i class="fas fa-comment-alt"></i>
-                        <span>Contato</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+	<div id="content">
+		<nav class="navbar navbar-expand-lg navbar-light">
+			<div class="container-fluid">
+				<button type="button" id="sidebar-collapse" class="btn btn-primary">
+					<div id="left" class="ml-0">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					
+					<div id="right">Toggle Sidebar</div>
+				</button>
 
-        <div id="content">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="container-fluid">
-                    <button type="button" id="sidebarCollapse" class="btn btn-info">
-						<div class="l ml-0">
-							<span></span>
-							<span></span>
-							<span></span>
-                        </div>
-                        
-                    	<div class="r">Toggle Sidebar</div>
-                    </button>
+				<a href="#" class="btn btn-dark ml-auto mr-2">Cadastre-se</a>
+				<a href="#" class="btn btn-outline-dark">Login</a>
+			</div>
+		</nav>
 
-                    <a href="#" class="btn btn-dark ml-auto mr-2">Cadastre-se</a>
-                    <a href="#" class="btn btn-outline-dark">Login</a>
-                </div>
-            </nav>
+		<h1>TESTE</h1>
+		
+		<div class="line"></div>
+		
+		<div id="carousel" class="carousel slide" data-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active p-2">
+					<div class="row">
+						<div class="col">
+							<h3>Último artigo oficial</h3>
+						</div>
 
-            <h1>TESTE</h1>
-            
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui est, tenetur quasi cumque aspernatur dolorum quas ratione, illum quo minus architecto itaque sed doloremque aut molestias neque error voluptates nihil?</p>
-            <span class="line"></span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id hic esse fugit vitae? Maxime soluta molestias obcaecati dignissimos nulla quod laudantium necessitatibus est quae similique, aut mollitia optio earum odio.</p>
-            <span class="line"></span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id hic esse fugit vitae? Maxime soluta molestias obcaecati dignissimos nulla quod laudantium necessitatibus est quae similique, aut mollitia optio earum odio.</p>
-            <span class="line"></span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id hic esse fugit vitae? Maxime soluta molestias obcaecati dignissimos nulla quod laudantium necessitatibus est quae similique, aut mollitia optio earum odio.</p>
-            <span class="line"></span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id hic esse fugit vitae? Maxime soluta molestias obcaecati dignissimos nulla quod laudantium necessitatibus est quae similique, aut mollitia optio earum odio.</p>
-            <span class="line"></span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id hic esse fugit vitae? Maxime soluta molestias obcaecati dignissimos nulla quod laudantium necessitatibus est quae similique, aut mollitia optio earum odio.</p>
-            <span class="line"></span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id hic esse fugit vitae? Maxime soluta molestias obcaecati dignissimos nulla quod laudantium necessitatibus est quae similique, aut mollitia optio earum odio.</p>
-            <span class="line"></span>
-        </div>
-    </div>
+						<div class="col">
+							<h3>Artigo oficial mais acessado</h3>
+						</div>
+					</div>
 
-	<!-- Carrousel -->
-		<!-- Último artigo oficial -->
-		<!-- Artigo oficial mais acessado -->
-		<!-- Último artigo de usuário -->
-		<!-- Artigo de usuário mais acessado -->
-		<!-- Último tópico do fórum -->
-		<!-- Tópico mais acessado do fórum -->
+					<div class="row">
+						<div class="col">
+							<div class="card">
+								<div class="card-body">
+									<h4 class="card-title">Lorem Ipsum</h4>
+									<h5 class="card-subtitle text-muted mb-4">Lorem ipsum dolor sit amet</h5>
+									<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iste fugit iusto accusantium molestias sequi pariatur itaque, nisi similique voluptate porro maiores laborum repellendus aperiam? Commodi suscipit autem officiis ratione!</p>
+									<a href="#" class="btn btn-primary">Lorem</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col">
+							<div class="card">
+								<div class="card-body">
+									<h4 class="card-title">Lorem Ipsum</h4>
+									<h5 class="card-subtitle text-muted mb-4">Lorem ipsum dolor sit amet</h5>
+									<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iste fugit iusto accusantium molestias sequi pariatur itaque, nisi similique voluptate porro maiores laborum repellendus aperiam? Commodi suscipit autem officiis ratione!</p>
+									<a href="#" class="btn btn-primary">Lorem</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="carousel-item p-2">
+					<div class="row">
+						<div class="col">
+							<h3>Último artigo de usuário</h3>
+						</div>
+
+						<div class="col">
+							<h3>Artigo de usuário mais acessado</h3>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col">
+							<div class="card">
+								<div class="card-body">
+									<h4 class="card-title">Lorem Ipsum</h4>
+									<h5 class="card-subtitle text-muted mb-4">Lorem ipsum dolor sit amet</h5>
+									<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iste fugit iusto accusantium molestias sequi pariatur itaque, nisi similique voluptate porro maiores laborum repellendus aperiam? Commodi suscipit autem officiis ratione!</p>
+									<a href="#" class="btn btn-primary">Lorem</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col">
+							<div class="card">
+								<div class="card-body">
+									<h4 class="card-title">Lorem Ipsum</h4>
+									<h5 class="card-subtitle text-muted mb-4">Lorem ipsum dolor sit amet</h5>
+									<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iste fugit iusto accusantium molestias sequi pariatur itaque, nisi similique voluptate porro maiores laborum repellendus aperiam? Commodi suscipit autem officiis ratione!</p>
+									<a href="#" class="btn btn-primary">Lorem</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="carousel-item p-2">
+					<div class="row">
+						<div class="col">
+							<h3>Último tópico do fórum</h3>
+						</div>
+
+						<div class="col">
+							<h3>Tópico mais acessado do fórum</h3>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col">
+							<div class="card">
+								<div class="card-body">
+									<h4 class="card-title">Lorem Ipsum</h4>
+									<h5 class="card-subtitle text-muted mb-4">Lorem ipsum dolor sit amet</h5>
+									<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iste fugit iusto accusantium molestias sequi pariatur itaque, nisi similique voluptate porro maiores laborum repellendus aperiam? Commodi suscipit autem officiis ratione!</p>
+									<a href="#" class="btn btn-primary">Lorem</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col">
+							<div class="card">
+								<div class="card-body">
+									<h4 class="card-title">Lorem Ipsum</h4>
+									<h5 class="card-subtitle text-muted mb-4">Lorem ipsum dolor sit amet</h5>
+									<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iste fugit iusto accusantium molestias sequi pariatur itaque, nisi similique voluptate porro maiores laborum repellendus aperiam? Commodi suscipit autem officiis ratione!</p>
+									<a href="#" class="btn btn-primary">Lorem</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<ol class="carousel-indicators">
+				<li data-target="#carousel" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel" data-slide-to="1"></li>
+				<li data-target="#carousel" data-slide-to="2"></li>
+			</ol>
+
+			<a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Anterior</span>
+			</a>
+
+			<a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Próximo</span>
+			</a>
+		</div>
+	</div>
 
 	<!-- Section -->
 		<!-- Sobre o Musicalizando -->
-
-	<!-- Cards -->
-		<!-- Artigos oficiais personalizados -->
-		<!-- Artigos de usuário personalizados -->
-		<!-- Tópicos personalizados do fórum -->
 
 	<!-- Jumbotron -->
 		<!-- Embeded Video: Covers -->
@@ -129,26 +229,26 @@
 		<!-- Stefani Giovana -->
 
 	<!-- Footer -->
-    
-    <script src="node_modules/jquery/dist/jquery.js"></script>
+	
+	<script src="node_modules/jquery/dist/jquery.js"></script>
 	<script src="node_modules/popper.js/dist/umd/popper.js"></script>
 	<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
 	<script type="text/javascript">
-        $(document).ready(function () {
-            var width = $(window).width();
+		$(document).ready(function () {
+			var width = $(window).width();
 
-            if(width <= 768) {
-                $('#sidebarCollapse').addClass('active');
-                $('#sidebar').addClass('active');
-                $('#content').toggleClass('active');
-            }
+			if(width <= 768) {
+				$('#sidebar-collapse').addClass('active');
+				$('#sidebar').addClass('active');
+				$('#content').toggleClass('active');
+			}
 
-            $(document).on('click', '#sidebarCollapse', function () {
-                $('#sidebar').toggleClass('active');
-                $(this).toggleClass('active');
-                $('#content').toggleClass('active');
-            });
-        });
-    </script>
+			$(document).on('click', '#sidebar-collapse', function () {
+				$('#sidebar').toggleClass('active');
+				$(this).toggleClass('active');
+				$('#content').toggleClass('active');
+			});
+		});
+	</script>
 </body>
 </html>

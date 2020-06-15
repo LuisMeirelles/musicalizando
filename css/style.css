@@ -36,7 +36,7 @@ i, span {
 }
 
 /* ---------------------------------------------------
-    SIDEBAR STYLE
+		SIDEBAR STYLE
 ----------------------------------------------------- */
 .wrapper {
   display: flex;
@@ -54,6 +54,47 @@ i, span {
   background: #1f317a;
   color: white;
   transition: all 0.3s;
+}
+#sidebar .sidebar-header {
+  min-width: 80px;
+  max-width: 250px;
+  text-align: center;
+  padding: 20px;
+  background-color: #192a71;
+}
+#sidebar .sidebar-header h3 {
+  display: block;
+  overflow: hidden;
+  animation: aumenta 0.3s;
+}
+#sidebar .sidebar-header strong {
+  display: none;
+}
+#sidebar .components {
+  padding: 20px 0;
+  border-bottom: 1px solid #47748b;
+}
+#sidebar ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: #192a71;
+}
+#sidebar ul li.active > a, #sidebar ul li a[aria-expanded=true] {
+  color: white;
+  background: #192a71;
+}
+#sidebar ul li a {
+  text-align: left;
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+}
+#sidebar ul li a:hover {
+  color: #1f317a;
+  background: white;
+}
+#sidebar ul li i {
+  margin-right: 10px;
 }
 #sidebar.active {
   width: 80px;
@@ -95,42 +136,6 @@ i, span {
   -ms-transform: translateX(50%);
   transform: translateX(50%);
 }
-#sidebar .sidebar-header {
-  min-width: 80px;
-  max-width: 250px;
-  text-align: center;
-  padding: 20px;
-  background-color: #192a71;
-}
-#sidebar .sidebar-header h3 {
-  display: block;
-  overflow: hidden;
-  animation: aumenta 0.3s;
-}
-#sidebar .sidebar-header strong {
-  display: none;
-}
-#sidebar ul li a {
-  text-align: left;
-  padding: 10px;
-  font-size: 1.1em;
-  display: block;
-}
-#sidebar ul li a:hover {
-  color: #1f317a;
-  background: white;
-}
-#sidebar ul li a i {
-  margin-right: 10px;
-}
-#sidebar ul li.active > a, #sidebar ul li a[aria-expanded=true] {
-  color: white;
-  background: #192a71;
-}
-#sidebar ul.components {
-  padding: 20px 0;
-  border-bottom: 1px solid #47748b;
-}
 
 a[data-toggle=collapse] {
   position: relative;
@@ -140,13 +145,14 @@ a[data-toggle=collapse] {
   text-align: right;
 }
 
-#sidebarCollapse {
-  background: #132053 linear-gradient(180deg, #1f317a, #132053) repeat-x;
-  border-color: #132053;
-  box-shadow: none;
-  cursor: pointer;
+#sidebar-collapse #left {
+  width: 14px;
+  height: 14px;
+  margin-top: 5px;
+  margin-right: 11px;
+  float: left;
 }
-#sidebarCollapse div span {
+#sidebar-collapse #left span {
   width: 100%;
   height: 2px;
   margin-top: 2px;
@@ -156,27 +162,21 @@ a[data-toggle=collapse] {
   transition: all 0.8s cubic-bezier(0.81, -0.33, 0.345, 1.375);
   transform: none;
 }
-#sidebarCollapse div span:first-of-type {
+#sidebar-collapse #left span:first-of-type {
   transform: rotate(135deg) translate(0px, 2px);
 }
-#sidebarCollapse div span:last-of-type {
+#sidebar-collapse #left span:last-of-type {
   transform: rotate(-135deg) translate(0px, -2px);
 }
-#sidebarCollapse div.l {
-  width: 14px;
-  height: 14px;
-  float: left;
-  margin-top: 5px;
-  margin-right: 11px;
-}
-#sidebarCollapse div.r {
-  float: right;
-}
-#sidebarCollapse.active div span:first-of-type {
+#sidebar-collapse.active #left span:first-of-type {
   transform: rotate(-315deg) translate(0px, -2px);
 }
-#sidebarCollapse.active div span:last-of-type {
+#sidebar-collapse.active #left span:last-of-type {
   transform: rotate(315deg) translate(0px, 2px);
+}
+
+#right {
+  float: right;
 }
 
 .dropdown-toggle::after {
@@ -187,14 +187,8 @@ a[data-toggle=collapse] {
   transform: translateY(-50%);
 }
 
-ul ul a {
-  font-size: 0.9em !important;
-  padding-left: 30px !important;
-  background: #192a71;
-}
-
 /* ---------------------------------------------------
-    CONTENT STYLE
+		CONTENT STYLE
 ----------------------------------------------------- */
 #content {
   width: calc(100% - 250px);
@@ -205,8 +199,32 @@ ul ul a {
   top: 0;
   right: 0;
 }
+
 #content.active {
   width: calc(100% - 80px);
+}
+
+.carousel-indicators {
+  position: relative;
+}
+.carousel-indicators li {
+  background-color: black;
+}
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-prev {
+  width: 3%;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next {
+  width: 3%;
 }
 
 @keyframes aumenta {
@@ -218,14 +236,17 @@ ul ul a {
   }
 }
 /* ---------------------------------------------------
-    MEDIAQUERIES
+		MEDIAQUERIES
 ----------------------------------------------------- */
 @media (max-width: 768px) {
   #sidebar {
+    text-align: center;
     min-width: 80px;
     max-width: 80px;
-    text-align: center;
     margin-left: -80px !important;
+  }
+  #sidebar .sidebar-header h3 {
+    display: none;
   }
   #sidebar.active {
     margin-left: 0 !important;
@@ -250,40 +271,27 @@ ul ul a {
   #sidebar.active ul ul a {
     padding: 10px !important;
   }
-  #sidebar > * {
-    display: none;
-  }
 
-  #sidebarCollapse {
+  #sidebar-collapse {
     padding: 12px 12px;
   }
-  #sidebarCollapse div span:first-of-type {
-    transform: rotate(-315deg) translate(0px, -2px);
-  }
-  #sidebarCollapse div span:last-of-type {
-    transform: rotate(315deg) translate(0px, 2px);
-  }
-  #sidebarCollapse div.l {
+  #sidebar-collapse #left {
     margin: 0px;
   }
-  #sidebarCollapse div.r {
+  #sidebar-collapse #left span:first-of-type {
+    transform: rotate(-135deg) translate(0px, 2px);
+  }
+  #sidebar-collapse #left span:last-of-type {
+    transform: rotate(135deg) translate(0px, -2px);
+  }
+  #sidebar-collapse #right {
     display: none;
-    clear: both;
   }
-  #sidebarCollapse.active div span:first-of-type {
-    transform: rotate(135deg) translate(0px, 2px);
+  #sidebar-collapse.active #left span:first-of-type {
+    transform: rotate(315deg) translate(0px, -2px);
   }
-  #sidebarCollapse.active div span:last-of-type {
-    transform: rotate(-135deg) translate(0px, -2px);
-  }
-
-  .dropdown-toggle::after {
-    top: auto;
-    bottom: 10px;
-    right: 50%;
-    -webkit-transform: translateX(50%);
-    -ms-transform: translateX(50%);
-    transform: translateX(50%);
+  #sidebar-collapse.active #left span:last-of-type {
+    transform: rotate(-315deg) translate(0px, 2px);
   }
 
   #content {
@@ -297,6 +305,15 @@ ul ul a {
     position: absolute;
     top: 0;
     right: 0;
+  }
+
+  .dropdown-toggle::after {
+    top: auto;
+    bottom: 10px;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    transform: translateX(50%);
   }
 }
 
