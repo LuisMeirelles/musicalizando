@@ -1,6 +1,14 @@
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+@keyframes aumenta {
+  from {
+    font-size: 5px;
+  }
+  to {
+    font-size: 1.75em;
+  }
+}
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins";
   background: #fafafa;
 }
 
@@ -14,7 +22,7 @@ a, a:hover, a:focus {
   text-decoration: none;
   transition: all 0.3s;
 }
-a[data-toggle=collapse] {
+a[data-toggle=collapse], a:hover[data-toggle=collapse], a:focus[data-toggle=collapse] {
   position: relative;
 }
 
@@ -34,13 +42,14 @@ a[data-toggle=collapse] {
   margin: 40px 0;
 }
 
-i, span {
+i {
   display: inline-block;
 }
 
-/* ---------------------------------------------------
-		SIDEBAR STYLE
------------------------------------------------------ */
+span {
+  display: inline-block;
+}
+
 .wrapper {
   display: flex;
   width: 100%;
@@ -97,6 +106,7 @@ i, span {
 #sidebar ul li i {
   margin-right: 10px;
 }
+
 #sidebar.activated {
   width: 80px;
   text-align: center;
@@ -161,6 +171,7 @@ i, span {
 #sidebar-collapse #left span:last-of-type {
   transform: rotate(-135deg) translate(0px, -2px);
 }
+
 #sidebar-collapse.activated #left span:first-of-type {
   transform: rotate(-315deg) translate(0px, -2px);
 }
@@ -172,17 +183,13 @@ i, span {
   float: right;
 }
 
-.dropdown-toggle::after {
-  display: block;
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
+#sign-up svg, #sign-in svg {
+  display: none;
+}
+#sign-up span, #sign-in span {
+  display: inline;
 }
 
-/* ---------------------------------------------------
-		CONTENT STYLE
------------------------------------------------------ */
 #content {
   width: calc(100% - 250px);
   padding: 20px;
@@ -191,8 +198,17 @@ i, span {
   position: absolute;
   right: 0;
 }
+
 #content.activated {
   width: calc(100% - 80px);
+}
+
+.dropdown-toggle::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
 }
 
 #carousel-desktop {
@@ -226,26 +242,12 @@ i, span {
   width: 3%;
 }
 
-@keyframes aumenta {
-  from {
-    font-size: 5px;
-  }
-  to {
-    font-size: 1.75em;
-  }
-}
-/* ---------------------------------------------------
-		MEDIAQUERIES
------------------------------------------------------ */
 @media (max-width: 768px) {
   #sidebar {
     text-align: center;
     min-width: 80px;
     max-width: 80px;
     margin-left: -80px !important;
-  }
-  #sidebar .sidebar-header h3 {
-    display: none;
   }
   #sidebar.activated {
     margin-left: 0 !important;
@@ -267,6 +269,9 @@ i, span {
     display: block;
     font-size: 1.3em;
   }
+  #sidebar .sidebar-header h3 {
+    display: none;
+  }
 
   #sidebar-collapse {
     padding: 12px 12px;
@@ -275,19 +280,26 @@ i, span {
     margin: 0px;
   }
   #sidebar-collapse #left span:first-of-type {
-    transform: rotate(-135deg) translate(0px, 2px);
+    transform: rotate(-315deg) translate(0px, -2px);
   }
   #sidebar-collapse #left span:last-of-type {
-    transform: rotate(135deg) translate(0px, -2px);
+    transform: rotate(315deg) translate(0px, 2px);
   }
   #sidebar-collapse #right {
     display: none;
   }
   #sidebar-collapse.activated #left span:first-of-type {
-    transform: rotate(315deg) translate(0px, -2px);
+    transform: rotate(135deg) translate(0px, 2px);
   }
   #sidebar-collapse.activated #left span:last-of-type {
-    transform: rotate(-315deg) translate(0px, 2px);
+    transform: rotate(-135deg) translate(0px, -2px);
+  }
+
+  #sign-up svg, #sign-in svg {
+    display: inline;
+  }
+  #sign-up span, #sign-in span {
+    display: none;
   }
 
   #content {
