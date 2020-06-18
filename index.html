@@ -3,13 +3,13 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
+
 	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
-	
+
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
-	
+
 	<title>Página Inicial - Musicalizando</title>
 </head>
 <body>
@@ -39,7 +39,7 @@
 					<i class="fas fa-copy"></i>
 					<span>Artigos</span>
 				</a>
-				
+
 				<ul class="collapse list-unstyled" id="pageSubmenu">
 					<li>
 						<a href="#">Artigos Oficiais</a>
@@ -76,20 +76,23 @@
 						<span></span>
 						<span></span>
 					</div>
-					
+
 					<div id="right">Toggle Sidebar</div>
 				</button>
 
-				<a href="#" class="btn btn-dark ml-auto mr-2">Cadastre-se</a>
-				<a href="#" class="btn btn-outline-dark">Login</a>
+				<a href="#" class="btn btn-dark ml-auto mr-2">
+					<span>Cadastre-se</span>
+				</a>
+				<a href="#" class="btn btn-outline-dark">
+					<span>Login</span>
+				</a>
 			</div>
 		</nav>
 
-		<h1>TESTE</h1>
-		
 		<div class="line"></div>
-		
-		<div id="carousel" class="carousel slide" data-ride="carousel">
+
+		<!-- Carousel com dois cards por slide -->
+		<div id="carousel-desktop" class="carousel slide" data-ride="carousel">
 			<div class="carousel-inner">
 				<div class="carousel-item active p-2">
 					<div class="row">
@@ -126,7 +129,7 @@
 						</div>
 					</div>
 				</div>
-				
+
 				<div class="carousel-item p-2">
 					<div class="row">
 						<div class="col">
@@ -199,23 +202,151 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<ol class="carousel-indicators">
-				<li data-target="#carousel" data-slide-to="0" class="active"></li>
-				<li data-target="#carousel" data-slide-to="1"></li>
-				<li data-target="#carousel" data-slide-to="2"></li>
+				<li data-target="#carousel-desktop" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel-desktop" data-slide-to="1"></li>
+				<li data-target="#carousel-desktop" data-slide-to="2"></li>
 			</ol>
 
-			<a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+			<a class="carousel-control-prev" href="#carousel-desktop" role="button" data-slide="prev">
 				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 				<span class="sr-only">Anterior</span>
 			</a>
 
-			<a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+			<a class="carousel-control-next" href="#carousel-desktop" role="button" data-slide="next">
 				<span class="carousel-control-next-icon" aria-hidden="true"></span>
 				<span class="sr-only">Próximo</span>
 			</a>
 		</div>
+		<!-- --------------------------------- -->
+
+		<!-- Carousel com um card por slide -->
+		<div id="carousel-mobile" class="carousel slide" data-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active p-2">
+					<div class="col">
+						<h3>Último artigo oficial</h3>
+					</div>
+
+					<div class="col">
+						<div class="card">
+							<div class="card-body">
+								<h4 class="card-title">Lorem Ipsum</h4>
+								<h5 class="card-subtitle text-muted mb-4">Lorem ipsum dolor sit amet</h5>
+								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iste fugit iusto accusantium molestias sequi pariatur itaque, nisi similique voluptate porro maiores laborum repellendus aperiam? Commodi suscipit autem officiis ratione!</p>
+								<a href="#" class="btn btn-primary">Lorem</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="carousel-item p-2">
+					<div class="col">
+						<h3>Artigo oficial mais acessado</h3>
+					</div>
+
+					<div class="col">
+						<div class="card">
+							<div class="card-body">
+								<h4 class="card-title">Lorem Ipsum</h4>
+								<h5 class="card-subtitle text-muted mb-4">Lorem ipsum dolor sit amet</h5>
+								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iste fugit iusto accusantium molestias sequi pariatur itaque, nisi similique voluptate porro maiores laborum repellendus aperiam? Commodi suscipit autem officiis ratione!</p>
+								<a href="#" class="btn btn-primary">Lorem</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="carousel-item p-2">
+					<div class="col">
+						<h3>Último artigo de usuário</h3>
+					</div>
+
+					<div class="col">
+						<div class="card">
+							<div class="card-body">
+								<h4 class="card-title">Lorem Ipsum</h4>
+								<h5 class="card-subtitle text-muted mb-4">Lorem ipsum dolor sit amet</h5>
+								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iste fugit iusto accusantium molestias sequi pariatur itaque, nisi similique voluptate porro maiores laborum repellendus aperiam? Commodi suscipit autem officiis ratione!</p>
+								<a href="#" class="btn btn-primary">Lorem</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="carousel-item p-2">
+					<div class="col">
+						<h3>Artigo de usuário mais acessado</h3>
+					</div>
+
+					<div class="col">
+						<div class="card">
+							<div class="card-body">
+								<h4 class="card-title">Lorem Ipsum</h4>
+								<h5 class="card-subtitle text-muted mb-4">Lorem ipsum dolor sit amet</h5>
+								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iste fugit iusto accusantium molestias sequi pariatur itaque, nisi similique voluptate porro maiores laborum repellendus aperiam? Commodi suscipit autem officiis ratione!</p>
+								<a href="#" class="btn btn-primary">Lorem</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="carousel-item p-2">
+					<div class="col">
+						<h3>Último tópico do fórum</h3>
+					</div>
+
+					<div class="col">
+						<div class="card">
+							<div class="card-body">
+								<h4 class="card-title">Lorem Ipsum</h4>
+								<h5 class="card-subtitle text-muted mb-4">Lorem ipsum dolor sit amet</h5>
+								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iste fugit iusto accusantium molestias sequi pariatur itaque, nisi similique voluptate porro maiores laborum repellendus aperiam? Commodi suscipit autem officiis ratione!</p>
+								<a href="#" class="btn btn-primary">Lorem</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="carousel-item p-2">
+					<div class="col">
+						<h3>Tópico mais acessado do fórum</h3>
+					</div>
+
+					<div class="col">
+						<div class="card">
+							<div class="card-body">
+								<h4 class="card-title">Lorem Ipsum</h4>
+								<h5 class="card-subtitle text-muted mb-4">Lorem ipsum dolor sit amet</h5>
+								<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iste fugit iusto accusantium molestias sequi pariatur itaque, nisi similique voluptate porro maiores laborum repellendus aperiam? Commodi suscipit autem officiis ratione!</p>
+								<a href="#" class="btn btn-primary">Lorem</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<ol class="carousel-indicators">
+				<li data-target="#carousel-mobile" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel-mobile" data-slide-to="1"></li>
+				<li data-target="#carousel-mobile" data-slide-to="2"></li>
+				<li data-target="#carousel-mobile" data-slide-to="3"></li>
+				<li data-target="#carousel-mobile" data-slide-to="4"></li>
+				<li data-target="#carousel-mobile" data-slide-to="5"></li>
+			</ol>
+
+			<a class="carousel-control-prev" href="#carousel-mobile" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Anterior</span>
+			</a>
+
+			<a class="carousel-control-next" href="#carousel-mobile" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Próximo</span>
+			</a>
+		</div>
+		<!-- ------------------------------ -->
 	</div>
 
 	<!-- Section -->
@@ -229,26 +360,11 @@
 		<!-- Stefani Giovana -->
 
 	<!-- Footer -->
-	
+
 	<script src="node_modules/jquery/dist/jquery.js"></script>
 	<script src="node_modules/popper.js/dist/umd/popper.js"></script>
 	<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function () {
-			var width = $(window).width();
 
-			if(width <= 768) {
-				$('#sidebar-collapse').addClass('active');
-				$('#sidebar').addClass('active');
-				$('#content').toggleClass('active');
-			}
-
-			$(document).on('click', '#sidebar-collapse', function () {
-				$('#sidebar').toggleClass('active');
-				$(this).toggleClass('active');
-				$('#content').toggleClass('active');
-			});
-		});
-	</script>
+	<script src="js/script.js"></script>
 </body>
 </html>
