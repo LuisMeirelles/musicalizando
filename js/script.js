@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(function () {
     const width = window.innerWidth
     const identifiers = ['#sidebar-collapse', '#sidebar', '#content']
 
